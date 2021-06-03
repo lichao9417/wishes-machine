@@ -1,0 +1,38 @@
+<!--pages/everyday/everyday.wxml-->
+<view class="wm-page" data-weui-theme="light">
+  <view class="wm-header">
+    <image src="/Icon/{{goodimg}}.png" style="width:100rpx;height:100rpx;"></image>
+    <view class="wm-theme">{{sj}}</view>
+    <view class="cu-form-group"  style="width:100%">
+      <view class="title">选择图片</view>
+      <switch class="orange radius sm" checked="{{checked}}" bindchange="switchCheckStatus"></switch>
+    </view>
+  </view>
+
+  <!--显示文字 -->
+  <view wx:if="{{!checked}}">
+    <view wx:for="{{wish}}">
+      <view bindtap="copyWish" data-text="{{item.content}}" class="weui-cell_access weui-cell">{{item.content}}</view>
+    </view>
+  </view>
+  <!--显示图片 -->
+  <view wx:if="{{checked}}" class="picture-box">
+    <view class="picture-item" wx:for="{{picture}}">		
+				<image src="{{item.fileID}}" alt bindtap="previewImage" data-src="{{item.fileID}}" show-menu-by-longpress></image>
+    </view>
+  </view>
+
+
+  <view wx:if="{{!textDisplay}}">
+    <view wx:for="{{picture}}">
+      <image  src="{{item.fileID}}"></image>
+    </view>
+  </view>
+
+  
+
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <image bindtap="updata" class="wmui-update-img" src="/Icon/updatebtn.png"></image>
+  </view>
+  
+</view>

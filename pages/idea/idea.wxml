@@ -1,0 +1,45 @@
+<!--pages/idea/idea.wxml-->
+<view class="page-box" data-weui-theme="light">
+
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item">
+                <view class="placeholder" bindlongpress="showMask">
+                    如果您对我们的小程序有什么意见或者建议，欢迎来撩客服小姐姐
+                </view>
+            </view>
+
+        </view>
+        <view><button open-type="contact">客服在这里</button></view>
+        
+    </view>
+</view>
+
+    
+    <view class="cu-modal show" wx:if="{{show}}">
+        <form bindsubmit="sub">
+            <view class="cu-dialog">
+                <view class="cu-bar bg-white justify-end">
+                    <view class="content">被你发现了</view>
+                    <view class="action" bindtap="hideMask">
+                        <text class="cuIcon-close text-red"></text>
+                    </view>
+                </view>
+                <view class="padding-xl">
+                    <input name='key' placeholder='请输入6位暗号'></input>
+                </view>
+                <view class="cu-bar bg-white justify-end">
+                    <view class="action">
+                        <button class="cu-btn line-green text-green" bindtap="hideMask">取消</button>
+                        <button class="cu-btn bg-green margin-left" form-type="submit">确定</button>
+
+                    </view>
+                </view>
+            </view>
+        </form>
+    </view>
+
+
+
+
+

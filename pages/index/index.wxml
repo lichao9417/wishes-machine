@@ -1,0 +1,23 @@
+<!--index.wxml-->
+
+<view class="index-box">
+  <view class="motto-box">
+    <view class="left-box">
+      <image src="/Icon/left-quote.png" style=""></image>
+    </view>
+    <view class="motto">
+      <view name="" id="" >
+        {{motto}}
+      </view>
+      <view class="author">
+        —— {{author}}
+      </view>
+    </view>
+    <view class="right-box">
+      <image src="/Icon/right-quote.png"></image>
+    </view>
+  </view>
+  <view class="img-box" bindtap="switchTab">
+    <image class="arrowimg" src="/Icon/arrow.png" bindtap="navigateTo"></image>
+  </view>
+</view>
